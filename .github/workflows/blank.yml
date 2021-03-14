@@ -11,15 +11,12 @@ jobs:
       with:
         filename: 'CreativeCraftPlus.zip'
         exclusions: '.github, manifest.json, mmc-pack.json'
-    - name: LOL2
-      uses: tenhaus/get-release-or-tag@v2
-      id: tag
-    - name: LOL
-      uses: docker://antonyurchenko/git-release:latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
-        PRE_RELEASE: "true"
-        DRAFT_RELEASE: "true"
-        ALLOW_TAG_PREFIX: "false"
-        CHANGELOG_FILE: "README.md"
-        RELEASE_NAME: ${{ steps.tag.outputs.tag }}
+    - name: Release
+      id: bump
+      uses: zwaldowski/match-label-action@v1
+      with:
+        allowed: major,minor,patch
+    - uses: zwaldowski/semver-release-action@v1
+      with:
+        bump: ${{ steps.bump.outputs.match }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}

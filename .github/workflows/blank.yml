@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-    - uses: actions/checkout@master
+      uses: actions/checkout@master
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:

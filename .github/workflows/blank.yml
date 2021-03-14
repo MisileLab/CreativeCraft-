@@ -19,6 +19,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         PRE_RELEASE: "true"
+        DRAFT_RELEASE: "true"
         ALLOW_TAG_PREFIX: "true"
-        RELEASE_NAME: "Modpack Update"
-        RELEASE_NAME_PREFIX: ${{ steps.tag.outputs.tag }}
+        RELEASE_NAME: ${{ steps.tag.outputs.tag }}

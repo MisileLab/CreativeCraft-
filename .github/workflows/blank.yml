@@ -4,13 +4,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: checkout
+    - uses: actions/checkout@master
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
         filename: 'CreativeCraftPlus.zip'
         exclusions: '.github, manifest.json, mmc-pack.json'
     - name: Upload Release
-    - uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1
       with:
         artifacts: "CreativeCraftPlus.zip"
         token: ${{ secrets.GITHUBTOKEN }}

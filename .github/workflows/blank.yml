@@ -11,8 +11,14 @@ jobs:
       with:
         filename: 'CreativeCraftPlus.zip'
         exclusions: '.github, manifest.json, mmc-pack.json'
-    - name: Upload Release
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "CreativeCraftPlus.zip"
-        token: ${{ secrets.GITHUBTOKEN }}
+    - name: LOL2
+      uses: tenhaus/get-release-or-tag@v2
+      id: tag
+    - name: LOL
+      uses: docker://antonyurchenko/git-release:latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+        PRE_RELEASE: "true"
+        ALLOW_TAG_PREFIX: "true"
+        RELEASE_NAME: "Modpack Update"
+        RELEASE_NAME_PREFIX: ${{ steps.tag.outputs.tag }}

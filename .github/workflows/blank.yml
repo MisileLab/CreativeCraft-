@@ -21,4 +21,5 @@ jobs:
         PRE_RELEASE: "true"
         DRAFT_RELEASE: "true"
         ALLOW_TAG_PREFIX: "true"
+        CHANGELOG_FILE: "README.md"
         RELEASE_NAME: ${{ steps.tag.outputs.tag }}

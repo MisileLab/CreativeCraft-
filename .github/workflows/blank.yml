@@ -26,8 +26,8 @@ jobs:
         with:
           filename: 'release.zip'
           exclusions: '.gitignore, changelog.md'
+      - name: RELEASE
         uses: ncipollo/release-action@v1
         with:
           artifacts: "release.zip"
-          bodyFile: 
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUBTOKEN }}

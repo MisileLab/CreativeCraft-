@@ -6,3 +6,18 @@
 
 Advanced Machine, Super Solar Panel 모드가 추가되었습니다.
 
+### Prerelease Build - 0.1P
+
+#### 버그 픽스
+
+MB(Minecraft Bug)-00001:크래시 나는 버그가 수정됬습니다.
+
+### Release Build - 0.1R
+
+#### 기능 추가
+
+Wireless Crafting Terminal 추가
+
+#### 기능 변경
+
+UniDict 업데이트

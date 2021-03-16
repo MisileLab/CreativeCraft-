@@ -25,9 +25,10 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           filename: 'release.zip'
-          exclusions: '.gitignore, changelog.md'
-      - name: RELEASE
+          exclusions: '.gitignore, changelog.md, .git, .github'
+      - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "release.zip"
-          token: ${{ secrets.GITHUBTOKEN }}
+            artifacts: "release.zip"
+            token: ${{ secrets.GITHUBTOKEN }}
+  

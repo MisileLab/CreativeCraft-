@@ -21,3 +21,9 @@ Wireless Crafting Terminal 추가
 #### 기능 변경
 
 UniDict 업데이트
+
+### Nightly Build - 0.2N
+
+ #### 기능 삭제
+
+Advanced Solar Panel 모드가 삭제됨에 따라 Advanced Solar Panel Patcher도 삭제됨

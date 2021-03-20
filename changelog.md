@@ -27,3 +27,10 @@ UniDict 업데이트
  #### 기능 삭제
 
 Advanced Solar Panel 모드가 삭제됨에 따라 Advanced Solar Panel Patcher도 삭제됨
+
+### Nightly Build - 0.2N+
+
+### 기능 추가
+
+Ban Hammer 모드 추가
+
